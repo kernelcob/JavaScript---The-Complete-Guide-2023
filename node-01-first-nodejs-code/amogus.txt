@@ -1,0 +1,47 @@
+const userName = 'Max';
+
+console.log(`Hi ${userName}!`);
+____________________________________________
+const fs = require('node:fs/promises');
+
+(async () => {
+    try {
+        const data = await fs.readFile('user-data.txt');
+        console.log(data.toString());
+
+        await fs.writeFile('user-data.txt', 'username=Max');
+        console.log('Written to file!');
+    } catch (err) {
+        console.error(err);
+    }
+})();
+
+const fs = require('node:fs/promises');
+
+  489, 4:23  res.send(`<h1>Hi ${userName}</h1><form method="POST" action="/"><input name="username" type="text"><button type="submit">Send</button>a</form>`)
+
+
+  "devDependencies": {
+    "@babel/core": "^7.6.2",
+    "@babel/preset-env": "^7.6.2",
+    "babel-loader": "^8.0.6",
+    "clean-webpack-plugin": "^3.0.0",
+    "core-js": "^3.2.1",
+    "regenerator-runtime": "^0.13.3",
+    "webpack": "^4.40.2",
+    "webpack-cli": "^3.3.9",
+    "webpack-dev-server": "^3.8.1"
+  }
+}
+September 2021 cutoff version
+  "devDependencies": {
+    "@babel/core": "^7.15.5",
+    "@babel/preset-env": "^7.15.6",
+    "babel-loader": "^8.2.3",
+    "clean-webpack-plugin": "^4.0.0",
+    "core-js": "^3.17.3",
+    "regenerator-runtime": "^0.13.9",
+    "webpack": "^5.52.1",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.3.1"
+  }
